@@ -1,0 +1,18 @@
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context" xmlns:c="http://www.springframework.org/schema/c"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+        <!--  xml配置bean  -->
+    <bean id="person" class="spring.ioc.Person" c:name="name" c:age="12" scope="prototype">
+            <!--    property与c命名空间同时存在时  优先使用property    -->
+<!--        <property name="name" value="张三"/>-->
+<!--        <property name="age" value="20"/>-->
+    </bean>
+
+        <!--    注解方式使用bean-->
+<!--    <context:component-scan base-package="ioc"/>-->
+
+</beans>
